@@ -1,8 +1,19 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+/* Her hentes vores web-fonte ind */
+@font-face {
+  font-family: "minion_proregular";
+  src: url("/minion_webfont/minionpro-regular-webfont.woff2") format("woff2"), url("/minion_webfont/minionpro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "minion_proregular", serif;
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
@@ -18,9 +29,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
