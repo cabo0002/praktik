@@ -6,14 +6,77 @@ import { Image } from 'astro:assets';
 import front_pic from "../assets/images/front_pic.png";
 import mappe from "../assets/images/mappe.svg";
 import water from "../assets/images/water.jpg";
+import ai from "../assets/images/ai.svg";
+import css from "../assets/images/css.svg";
+import figma from "../assets/images/figma.svg";
+import github from "../assets/images/github.svg";
+import html from "../assets/images/html.svg";
+import id from "../assets/images/id.svg";
+import js from "../assets/images/js.svg";
+import ps from "../assets/images/ps.svg";
+import tailwind from "../assets/images/tailwind.svg";
+import vscode from "../assets/images/vscode.svg";
+import on_chair from "../assets/images/on_chair.png";
 ---
 <MainLayout title="Digital Ansøgning">
 <div class="grid grid-cols-2">
-	<div><Image src={front_pic} format="webp" alt="portætbillede af piger" class="" /></div>
+	<div><Image src={front_pic} format="webp" alt="portætbillede af pige" class="" /></div>
 	<div><Image src={mappe} alt="computer mappe icon" class="" /></div>
 </div>
 
 <section>
-		<div><Image src={water} format="webp" alt="klippe i vandet" class="" /></div>
+  <div class="relative">
+    <Image src={water} format="webp" alt="klippe i vandet" class="w-full h-full object-cover" />
+    
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full px-4 sm:px-10 lg:px-16 max-w-screen-xl">
+      
+		<!-- Overskrift med margin til de næste sektioner -->
+      	<div class="text-center">
+        	<p class="text-white font-bold text-2xl sm:text-4xl md:text-6xl">Kvalifikationer.</p>
+      	</div>
+
+     	 <!-- De tre div'er med billeder -->
+      	<div class="py-3 px-6 border border-none rounded-[50px] bg-white/75 flex justify-center gap-10 sm:gap-15 lg:gap-50 mx-auto mt-16">
+			<div><Image src={ai} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+			<div><Image src={ps} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+			<div><Image src={id} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+    	</div>
+
+    	<div class="py-3 px-6 border border-none rounded-[50px] bg-white/75 flex justify-center gap-10 sm:gap-15 lg:gap-50 mx-auto mt-16">
+			<div><Image src={figma} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+			<div><Image src={vscode} alt="" class="w-10 sm:w-15 md:w-18 h-auto"/></div>
+			<div><Image src={github} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+    	</div>
+
+    	<div class="py-3 px-6 border border-none rounded-[50px] bg-white/75 flex justify-center gap-10 sm:gap-15 lg:gap-40 mx-auto mt-16">
+			<div><Image src={html} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+			<div><Image src={js} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+			<div><Image src={css} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+			<div><Image src={tailwind} alt="" class="w-10 sm:w-15 md:w-18 h-auto" /></div>
+    	</div>
+    </div>
+  </div>
 </section>
+
+<div class="grid grid-cols-2">
+	<div><Image src={on_chair} alt="" class=""/></div>
+	<div>
+		<h1 class="uppercase text-[200px]">Hvem er jeg?</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+			<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+<section class="">
+  <h2 class="uppercase text-[180px]">Udvalgte projekter</h2>
+  
+ 	<div class="flex flex-col gap-8 h-screen overflow-y-auto w-4/5">
+		<div class="project"><Image src={html} alt="" class="rounded-lg shadow-lg"></div>
+		<div class="project"><Image src={html} alt=""class="rounded-lg shadow-lg"></div>
+		<div class="project"><Image src={html} alt="" class="rounded-lg shadow-lg"></div>
+		<div class="project"><Image src={html} alt="" class="rounded-lg shadow-lg"></div>
+  	</div>
+</section>
+
+
 </MainLayout>
