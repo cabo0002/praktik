@@ -1,11 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import front_pic from "../assets/images/front_pic.png";
 import mappe from "../assets/images/mappe.svg";
-import water from "../assets/images/water.jpg";
+import water from "../assets/images/water.png";
 import ai from "../assets/images/ai.svg";
 import css from "../assets/images/css.svg";
 import figma from "../assets/images/figma.svg";
@@ -17,10 +16,13 @@ import ps from "../assets/images/ps.svg";
 import tailwind from "../assets/images/tailwind.svg";
 import vscode from "../assets/images/vscode.svg";
 import on_chair from "../assets/images/on_chair.png";
+import illustrator from "../assets/images/illustrator.png";
+import magivenner from "../assets/images/magivenner.png";
+import pyoma from "../assets/images/pyoma.png";
 ---
 <MainLayout title="Digital Ansøgning">
 <div class="grid grid-cols-2">
-	<div><Image src={front_pic} format="webp" alt="portætbillede af pige" class="" /></div>
+	<div><Image src={front_pic} alt="portætbillede af pige" class="" /></div>
 	<div><Image src={mappe} alt="computer mappe icon" class="" /></div>
 </div>
 
@@ -70,13 +72,10 @@ import on_chair from "../assets/images/on_chair.png";
 <section class="">
   <h2 class="uppercase text-[180px]">Udvalgte projekter</h2>
   
- 	<div class="flex flex-col gap-8 h-screen overflow-y-auto w-4/5">
-		<div class="project"><Image src={html} alt="" class="rounded-lg shadow-lg"></div>
-		<div class="project"><Image src={html} alt=""class="rounded-lg shadow-lg"></div>
-		<div class="project"><Image src={html} alt="" class="rounded-lg shadow-lg"></div>
-		<div class="project"><Image src={html} alt="" class="rounded-lg shadow-lg"></div>
+ 	<div class="">
+		<div class="project"><Image src={illustrator} alt="" class=""></div>
+		<div class="project"><Image src={magivenner} alt=""class=""></div>
+		<div class="project"><Image src={pyoma} alt="" class=""></div>
   	</div>
 </section>
-
-
 </MainLayout>
