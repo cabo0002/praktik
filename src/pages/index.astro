@@ -69,13 +69,34 @@ import pyoma from "../assets/images/pyoma.png";
 	</div>
 </div>
 
-<section class="">
-  <h2 class="uppercase text-[180px]">Udvalgte projekter</h2>
+<section class="relative flex">
+    <!-- Sticky container til overskriften -->
+    <div class="w-1/2 h-screen sticky top-0 flex items-center">
+        <h2 class="uppercase text-[160px] leading-none">Udvalgte projekter</h2>
+    </div>
+
+    <!-- Billedsektion -->
+    <div class="w-1/2 flex flex-col space-y-10">
+        <div class="project"><Image src={illustrator} alt="" /></div>
+        <div class="project"><Image src={magivenner} alt="" /></div>
+        <div class="project"><Image src={pyoma} alt="" /></div>
+        <div class="project"><Image src={illustrator} alt="" /></div>
+    </div>
+</section>
+
+
+
+<!-- <section class="">
+	
+<div>
+	
+	<h2 class="sticky" class="uppercase text-[180px]">Udvalgte projekter</h2>
+</div>
   
  	<div class="">
 		<div class="project"><Image src={illustrator} alt="" class=""></div>
 		<div class="project"><Image src={magivenner} alt=""class=""></div>
 		<div class="project"><Image src={pyoma} alt="" class=""></div>
   	</div>
-</section>
+</section> -->
 </MainLayout>
