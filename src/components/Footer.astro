@@ -1,9 +1,15 @@
 ---
 import { Image } from 'astro:assets';
-import plakat from "../assets/images/plakat.svg";
+import plakaten from "../assets/images/plakaten.svg";
 ---
-<div class="flex items-center justify-center h-screen">
-  <div>
-    <Image src={plakat} alt="" class="drop-shadow-xl" />
+<div class="flex items-center justify-center h-screen relative">
+  <div class="relative wobble-hor-top">
+    <Image src={plakaten} alt="illustration af papir" class="w-full max-w-[600px] sm:max-w-[800px] lg:max-w-[1000px]" />
+
+    <!-- Teksten er absolut placeret og responsivt justeret -->
+    <p class="underline absolute top-[78%] left-[53%] sm:left-[43%] lg:left-[53%] transform -translate-x-1/2 -translate-y-1/2 -rotate-89 origin-center text-xs sm:text-base lg:text-l">
+      <a style="font-family: 'Cutive Mono';" href="mailto:carobomholt@gmail.com">carobomholt@gmail.com</a>
+    </p>
+    <a style="font-family: 'Cutive Mono';" class="underline absolute top-[85%] left-[22%] sm:left-[32%] lg:left-[42%] transform -translate-x-1/2 -translate-y-1/2 -rotate-89 origin-center text-xs sm:text-base lg:text-l" href="https://www.linkedin.com/in/caroline-nymark-b-bab0a8136/">LinkedIn</a>
   </div>
 </div>
