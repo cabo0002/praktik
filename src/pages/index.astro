@@ -4,8 +4,7 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import billede_mig from "../assets/images/billede_mig.png";
 import mappe from "../assets/images/mappe.svg";
-import empty_mappe from "../assets/images/empty_mappe.svg";
-import water from "../assets/images/water.png";
+import gradient from "../assets/images/gradient.png";
 import ai from "../assets/images/ai.svg";
 import css from "../assets/images/css.svg";
 import figma from "../assets/images/figma.svg";
@@ -17,37 +16,31 @@ import ps from "../assets/images/ps.svg";
 import tailwind from "../assets/images/tailwind.svg";
 import vscode from "../assets/images/vscode.svg";
 import on_chair from "../assets/images/on_chair.png";
-import illustrator from "../assets/images/illustrator.png";
+import spil from "../assets/images/spil.png";
 import magivenner from "../assets/images/magivenner.png";
 import pyoma from "../assets/images/pyoma.png";
 ---
 <MainLayout title="Digital Ansøgning">
 <section>
-	<div class="grid grid-cols-2 pt-40 lg:pt-15 lg:ml-40 lg:mr-50">
+<div class="grid grid-cols-2 mt-5 lg:ml-40 lg:mr-50 zoomin">
   <!-- Første billede -->
   <div>
     <Image src={billede_mig} format="webp" alt="Portrætbillede af pige" class="w-sm lg:w-auto"/>
+	<p class="pl-11 uppercase text-xs lg:text-lg mt-4">Designer med - overblik, detaljer og passion</p>
   </div>
 
   <!-- Mappe + Tekst -->
   <div class="relative">
-    <div class="px-6 drop-shadow-2xl"><Image src={empty_mappe} alt="Computer mappe icon"/></div>
-
-    <!-- Tekst placeret ovenpå billedet -->
-    <div class="absolute top-1/4 lg:top-1/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center animate__animated animate__fadeInUp delay-150">
-      <h1 class="text-3xl lg:text-8xl font-medium">Caroline</h1>
-      <h2 class="text-4xl lg:text-9xl font-bold uppercase">Bomholt</h2>
-    </div>
+    <div class="px-4 pt-10 drop-shadow-2xl"><Image src={mappe} alt="Computer mappe icon"/></div>
   </div>
 </div>
-<p class="uppercase absolute items-center lg:mx-20 text-xs lg:text-lg">Designer med - overblik, detaljer og passion</p>
 </section>
 
 <section>
   <div class="relative mt-45">
-    <Image src={water} format="webp" alt="klippe i vandet" class="w-full sm:h-[800px] lg:h-[1100px] object-cover" />
+    <Image src={gradient} format="webp" alt="farve gradient billeder" class="w-full sm:h-[800px] lg:h-[1100px] object-cover" />
     
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 sm:px-10 lg:px-16 max-w-screen-xl text-center">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 sm:px-10 lg:px-16 max-w-screen-xl text-center zoomin1">
       
 		<!-- Overskrift med margin til de næste sektioner -->
       	<div class="text-center">
@@ -55,35 +48,34 @@ import pyoma from "../assets/images/pyoma.png";
       	</div>
 
      	 <!-- De tre div'er med billeder -->
-      	<div class="py-3 px-6 border border-none rounded-[50px] bg-white/75 flex justify-center gap-15 lg:gap-50 mx-auto mt-16">
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={ai} alt="" class="w-10 lg:w-18 h-auto" /></div>
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={ps} alt="" class="w-10 lg:w-18 h-auto" /></div>
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={id} alt="" class="w-10 lg:w-18 h-auto" /></div>
+      	<div class="py-3 px-6 border border-none rounded-[50px] bg-white/75 flex justify-center gap-15 lg:gap-50 mx-auto mt-5 lg:mt-10">
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={ai} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={ps} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={id} alt="" class="w-10 lg:w-18 h-auto" /></div>
     	</div>
 
     	<div class="py-3 px-6 border border-none rounded-[50px] bg-white/75 flex justify-center gap-15 lg:gap-50 mx-auto mt-16">
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={figma} alt="" class="w-10 lg:w-18 h-auto" /></div>
-			<div class="hover:scale-125 delay-150 duration-30 opacity-50 hover:opacity-100"><Image src={vscode} alt="" class="w-10 lg:w-18 h-auto"/></div>
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={github} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={figma} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-30 opacity-50 hover:opacity-100"><Image src={vscode} alt="" class="w-10 lg:w-18 h-auto"/></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={github} alt="" class="w-10 lg:w-18 h-auto" /></div>
     	</div>
 
     	<div class="py-3 px-6 border border-none rounded-[50px] bg-white/75 flex justify-center gap-15 lg:gap-40 mx-auto mt-16">
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={html} alt="" class="w-10 lg:w-18 h-auto" /></div>
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={js} alt="" class="w-10 lg:w-18 h-auto" /></div>
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={css} alt="" class="w-10 lg:w-18 h-auto" /></div>
-			<div class="hover:scale-125 delay-150 duration-300 opacity-50 hover:opacity-100"><Image src={tailwind} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={html} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={js} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={css} alt="" class="w-10 lg:w-18 h-auto" /></div>
+			<div class="hover:scale-135 delay-50 duration-300 opacity-50 hover:opacity-100"><Image src={tailwind} alt="" class="w-10 lg:w-18 h-auto" /></div>
     	</div>
     </div>
   </div>
 </section>
 
-<section class="mx-20 lg:mx-45 mt-20 lg:mt-50">
+<section class="mx-20 lg:mx-45 mt-20 lg:mt-50 fadein">
 <div class="lg:grid gap-0 grid-cols-2">
 	<Image src={on_chair} alt="" class="w-lg place-self-center"/>
 	<div>
-		<h1 class="uppercase font-bold text-8xl lg:text-[180px]/55">Hvem er jeg?</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
-			<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h1 class="uppercase font-bold text-8xl lg:text-[160px]/55">Hvem er jeg?</h1>
+		<p class="text-lg">Mit navn er Caroline, jeg er 25 år gammel og studerer multimediedesign på KEA. Jeg har altid haft en passion for kreativitet og design, og dette studie giver mig helt nye muligheder indenfor, udvikling og færdigheder inden for grafisk design, webdesign og digital kommunikation.<br><br>Jeg elsker at få idéer og eksperimentere, men jeg arbejder samtidig målrettet. Min perfektionisme betyder, at jeg har svært ved at slippe et projekt, før det lever op til mine egne høje standarder – men det sikrer samtidig et stærkt og professionelt resultat.<br><br>Min interesse for digital design udspringer fra mit kreative sind, og studiet har virkelig vækket min interesse for digital design, derfor bruger jeg også en del fritid på at tillære mig ny viden. Jeg kan bedst beskrives som en rolig og ydmyg person, som er pligtopfyldende og god til at tage ansvar.
 	</div>
 </div>
 </section>
@@ -96,10 +88,53 @@ import pyoma from "../assets/images/pyoma.png";
 
     <!-- Billedsektion -->
     <div class="w-1/2 flex flex-col space-y-10">
-        <div class="project"><Image src={illustrator} alt="" /></div>
-        <div class="project"><Image src={magivenner} alt="" /></div>
-        <div class="project"><Image src={pyoma} alt="" /></div>
-        <div class="project"><Image src={illustrator} alt="" /></div>
+        <div class="project fadein1"><Image src={pyoma} alt="" /></div>
+        <div class="project fadein2"><Image src={magivenner} alt="" /></div>
+        <div class="project fadein3"><Image src={spil} alt="" /></div>
     </div>
 </section>
 </MainLayout>
+
+
+<script>
+   import { inView } from "motion";
+ 
+  const FadeIn = document.querySelector(".fadein");
+
+  inView(FadeIn, () => {
+    FadeIn.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+ const ZoomIn = document.querySelector(".zoomin");
+
+  inView(ZoomIn, () => {
+    ZoomIn.classList.add("animate__animated", "animate__zoomIn");
+  });
+
+ const ZoomIn1 = document.querySelector(".zoomin1");
+
+  inView(ZoomIn1, () => {
+    ZoomIn1.classList.add("animate__animated", "animate__zoomIn");
+  });
+
+const FadeIn1 = document.querySelector(".fadein1");
+
+  inView(FadeIn1, () => {
+    FadeIn1.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+const FadeIn2 = document.querySelector(".fadein2");
+
+  inView(FadeIn2, () => {
+    FadeIn2.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+const FadeIn3 = document.querySelector(".fadein3");
+
+  inView(FadeIn3, () => {
+    FadeIn3.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+
+
+</script>
