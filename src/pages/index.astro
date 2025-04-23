@@ -19,6 +19,7 @@ import on_chair from "../assets/images/on_chair.png";
 import spil from "../assets/images/spil.png";
 import magivenner from "../assets/images/magivenner.png";
 import pyoma from "../assets/images/pyoma.png";
+import typografi from "../assets/images/typografi.png";
 ---
 <MainLayout title="Digital Ansøgning">
 <section>
@@ -91,6 +92,7 @@ import pyoma from "../assets/images/pyoma.png";
         <div class="project fadein1"><Image src={pyoma} alt="" /></div>
         <div class="project fadein2"><Image src={magivenner} alt="" /></div>
         <div class="project fadein3"><Image src={spil} alt="" /></div>
+        <div class="project fadein4"><Image src={typografi} alt="" /></div>
     </div>
 </section>
 </MainLayout>
@@ -135,6 +137,10 @@ const FadeIn3 = document.querySelector(".fadein3");
     FadeIn3.classList.add("animate__animated", "animate__fadeInRight");
   });
 
+const FadeIn4 = document.querySelector(".fadein4");
 
+  inView(FadeIn4, () => {
+    FadeIn4.classList.add("animate__animated", "animate__fadeInRight");
+  });
 
 </script>
